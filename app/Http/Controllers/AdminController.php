@@ -7,6 +7,11 @@ use \App\User;
 use \App\Post;
 use \Auth;
 
+use App\Exports\UsersExport;
+use App\Exports\PostsExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;    
+
 class AdminController extends Controller
 {
     public function __construct(){
@@ -70,6 +75,7 @@ class AdminController extends Controller
     }
 
 
+
     
 
 
@@ -120,4 +126,18 @@ class AdminController extends Controller
         $user->delete();
         return redirect('/admin/users');
     }
+    
+
+    public function export_users() 
+    {
+        return Excel::download(new UsersExport, 'users.xlsx');
+    }
+    public function export_posts() 
+    {
+        return Excel::download(new PostsExport, 'posts.xlsx');
+    }
+
 }
+
+
+

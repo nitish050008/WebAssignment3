@@ -39,6 +39,7 @@
                 @endforeach
 
             </table>
+            <a href="/admin/posts/export" class="btn btn-sm btn-info">Export Data to Excel</a>
         </div>
     </div>
 </div>        

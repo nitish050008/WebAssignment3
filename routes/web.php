@@ -31,6 +31,8 @@ Route::get('/admin/users/{user}/edit','AdminController@edit_user_form');
 Route::post('/admin/users/{user}/edit','AdminController@edit_user_edit');
 Route::post('/admin/users/{user}/delete','AdminController@delete_user');
 
+Route::get('/admin/users/export','AdminController@export_users');
+Route::get('/admin/posts/export','AdminController@export_posts');
 
 //Auth::routes();
 
