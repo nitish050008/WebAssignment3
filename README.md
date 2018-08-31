@@ -31,7 +31,10 @@ And then Add the following line to the php.ini file under "php.ini Options" sect
 
 
 
-
+**Default Admin credentials
+    email : admin@admin.com
+    password : secret
+    
 
 
 
